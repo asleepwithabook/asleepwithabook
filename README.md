@@ -1,13 +1,7 @@
----
-format:
-  html:
-    theme: style.scss
----
-<link rel="stylesheet" href="style.css">
-
 ## Hi, I'm Asher ♡
-<img class = "circle-image" align = "right" src = "https://github.com/user-attachments/assets/a58260b6-2e10-4bf2-9a41-6a7e3653c917">
-
+<img 
+  src="https://wsrv.nl/?url=raw.githubusercontent.com/asleepwithabook/asleepwithabook/main/avatar.png&w=300&h=300&mask=circle"
+  align=right>
 <!--
 **asleepwithabook/asleepwithabook** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
