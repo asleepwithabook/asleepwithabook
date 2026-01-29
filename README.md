@@ -11,7 +11,7 @@
 
 *Data Science and Political Economy Student at [The College of Idaho](collegeofidaho.edu)*
 
-### about me
+### About Me
 
 ```r
 asher <- data.frame(
@@ -24,7 +24,7 @@ asher <- data.frame(
 
 <img height="230" alt="What I'm Learning Graphic" src="https://github.com/user-attachments/assets/750c6549-2347-4a4d-9e4b-7d440155a8ea">
 
-### what i'm learning
+### What I'm learning
 
 - **Data visualization in ggraph**
   - *Network analysis*
@@ -36,34 +36,54 @@ asher <- data.frame(
   - *Assessing test validity with exploratory factor analysis*
   - *Scoring tests with item response theory*
 
-## fun things i've made
+## Sample project
 
-### [factor analysis on chapman university's american fears survey](https://github.com/asleepwithabook/individual_project)
+### [Factor analysis on Chapman University's American Fears Survey (Wave 10)](https://github.com/asleepwithabook/individual_project)
 
-#### tools
+#### Tools
 
-R:
-  tidyverse
-  psych
+```mermaid
+%%{init: {"theme": "default", "securityLevel": "strict", "startOnLoad": false, "theme": "neutral"}}%%
 
+erDiagram
+  R ||..|{ package : using
+  package {
+    tidyverse psych
+    tidygraph umap
+    broom stats
+  }
+  R ||..|{ environment : in
+  environment {
+    Positron Quarto
+  }
+  
+```
 
-#### overview
+#### Overview
 The Chapman University Survey on American Fears (CSAF) collects data on Americans' fears, attitudes, and behaviors. Using factor analysis, we can see how these categories and the items within them are related.
 
 > *Are all the questions about fear of pollution measuring a "fear of pollution" trait?*  
 > *Does news consumption load onto the same factor as perceptions of political selfishness?*
 
-#### process
-Survey data tend to be messy. The CSAF doesn't define its own variables, so it didn't mark questions as reverse-scaled. 
-
-After reversing the necessary questions, they need to be labeled so that factors can be correctly identified.
+#### Process
+Survey data tend to be messy. The CSAF doesn't define its own variables, so it didn't mark questions as reverse-scaled. After reversing the necessary questions, they need to be labeled so that factors can be correctly identified.
 
 > Q17A doesn't give me enough information to say that a factor is measuring religiosity!
 
-This required parsing the codebook using regex, pulling the question text and possible answers into a readable format.
+This required parsing the codebook using regex, pulling the question text and possible answers into a readable format. Once the data is readable, the factor analysis can be performed. I used psych::fa() to perform a hierarchical factor analysis.
 
-Once the data is readable, the factor analysis can be performed. I used psych::fa() to perform a hierarchical factor analysis
+#### Results
 
-#### results
+<p align="center">
+  <a href="https://github.com/asleepwithabook/individual_project/higher_order_structure.png">
+    <img height="500" alt="higher_order_structure" src="https://github.com/user-attachments/assets/edff6eac-9ebd-4efd-9ba6-e62805881509">
+  </a>
+</p>
 
-#### takeaways
+The first-order factors explain the variance of groups of individual questions, which I've labeled to reflect the common themes in questions that have significant loadings (|x| > 0.4) on them. Higher-order factors explain the variance of groups of first-order factors, allowing us to group factors for analysis. 
+
+>Orphans are first-order factors that don't have significant loadings on any higher-order factors. Strength of loadings are represented by line weight and alpha value.
+
+#### Takeaways
+
+
