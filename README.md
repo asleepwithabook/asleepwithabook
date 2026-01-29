@@ -17,7 +17,7 @@
 asher <- data.frame(
   pronouns          = c("she", "her", "hers"),
   code              = c("R", "Python", "HTML", "CSS"),
-  tools             = c("tidyverse", "regex", "Shiny", "tidymodels", "Quarto"),
+  tools             = c("tidyverse", "regex", "Shiny", "Quarto"),
   statistic_methods = c("Factor Analysis", "ANOVA", "Regression", "PCA")
 )
 ```
@@ -36,7 +36,7 @@ asher <- data.frame(
   - *Assessing test validity with exploratory factor analysis*
   - *Scoring tests with item response theory*
 
-## Sample project: [Factor analysis on Chapman University's American Fears Survey (Wave 10)](https://github.com/asleepwithabook/individual_project)
+## Sample project: [Factor Analysis - Chapman University's American Fears Survey (Wave 10)](https://github.com/asleepwithabook/individual_project)
 
 ### Tools
 
@@ -46,9 +46,9 @@ asher <- data.frame(
 flowchart LR
   DATA["Data:<br/>Chapman Survey on American Fears from ARDA"]
   R["R"]
-  PACKAGE["Packages<br/>tidyverse · psych · tidygraph"]
-  DEVELOPMENT["Development<br/>Positron"]
-  PUBLISHING["Quarto · reveal.js"]
+  PACKAGE["Packages:<br/>tidyverse · psych · tidygraph"]
+  DEVELOPMENT["Development:<br/>Positron"]
+  PUBLISHING["Publihsing:<br/>Quarto · reveal.js"]
 
   DATA --> R
   R --> PACKAGE
