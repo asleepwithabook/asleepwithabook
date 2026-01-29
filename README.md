@@ -1,3 +1,12 @@
+<!--
+ideas:
+- gnome sort commits
+- https://rfortherestofus.com/2021/08/rstudio-project-structure
+- https://jonathansoma.com/fancy-github/github-profile/
+- https://www.r-bloggers.com/2025/05/keep-your-r-code-clean-and-consistent-with-air/
+- https://medium.com/@chijiokeokorji/from-meh-to-marvelous-the-ultimate-guide-to-crafting-a-killer-github-profile-8dd3f6c6d602
+-->
+
 ## hi, i'm asher ♡
 
 <img 
