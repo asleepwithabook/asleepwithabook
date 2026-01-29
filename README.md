@@ -82,9 +82,10 @@ This required parsing the codebook using regex, pulling the question text and po
 ### Results
 
 <p align="center">
-  <a href="https://github.com/asleepwithabook/individual_project/higher_order_structure.png">
-    <img height="500" alt="higher_order_structure" src="https://github.com/user-attachments/assets/edff6eac-9ebd-4efd-9ba6-e62805881509">
-  </a>
+
+[![higher_order_structure_dark](https://github.com/user-attachments/assets/edff6eac-9ebd-4efd-9ba6-e62805881509#gh-dark-mode-only)](https://github.com/asleepwithabook/individual_project/higher_order_structure_dark.png)
+[![higher_order_structure_light](https://github.com/user-attachments/assets/9fbacd63-55af-469d-b34a-7513db328720#gh-light-mode-only)](https://github.com/asleepwithabook/individual_project/higher_order_structure_light.png)
+
 </p>
 
 The first-order factors explain the variance of groups of individual questions, which I've labeled to reflect the common themes in questions that have significant loadings ($|x| > 0.4$) on them. Higher-order factors explain the variance of groups of first-order factors, allowing us to group factors for analysis. 
