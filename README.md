@@ -57,7 +57,7 @@ flowchart LR
   R["R"]
   PACKAGE["Packages:<br/>tidyverse · psych · tidygraph"]
   DEVELOPMENT["Development:<br/>Positron"]
-  PUBLISHING["Publihsing:<br/>Quarto · reveal.js"]
+  PUBLISHING["Publishing:<br/>Quarto · reveal.js"]
 
   DATA --> R
   R --> PACKAGE
