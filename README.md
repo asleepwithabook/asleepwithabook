@@ -36,31 +36,29 @@ asher <- data.frame(
   - *Assessing test validity with exploratory factor analysis*
   - *Scoring tests with item response theory*
 
-## Sample project
+## Sample project: [Factor analysis on Chapman University's American Fears Survey (Wave 10)](https://github.com/asleepwithabook/individual_project)
 
-### [Factor analysis on Chapman University's American Fears Survey (Wave 10)](https://github.com/asleepwithabook/individual_project)
-
-#### Tools
+### Tools
 
 ```mermaid
 %%{init: {"theme": "default", "securityLevel": "strict", "startOnLoad": false, "theme": "neutral"}}%%
 
-erDiagram
-  R ||..|{ package : using
-  package {
-    tidyverse psych
-    tidygraph umap
-    broom stats
-  }
-  R ||..|{ environment : in
-  environment {
-    Positron Quarto
-  }
-  
+flowchart LR
+  DATA["Data:<br/>Chapman Survey on American Fears from ARDA"]
+  R["R"]
+  PACKAGE["Packages<br/>tidyverse · psych · tidygraph"]
+  DEVELOPMENT["Development<br/>Positron"]
+  PUBLISHING["Quarto · reveal.js"]
+
+  DATA --> R
+  R --> PACKAGE
+  R --> DEVELOPMENT
+  PACKAGE --> PUBLISHING
+  DEVELOPMENT --> PUBLISHING
 ```
 
-#### Overview
-The Chapman University Survey on American Fears (CSAF) collects data on Americans' fears, attitudes, and behaviors. Using factor analysis, we can see how these categories and the items within them are related.
+### Overview
+The [Chapman University Survey on American Fears (CSAF)](thearda.com/data-archive?fid=CSAF2024&tab=1) collects data on Americans' fears, attitudes, and behaviors. Using factor analysis, we can see how these categories and the items within them are related.
 
 > *Are all the questions about fear of pollution measuring a "fear of pollution" trait?*  
 > *Does news consumption load onto the same factor as perceptions of political selfishness?*
@@ -68,11 +66,11 @@ The Chapman University Survey on American Fears (CSAF) collects data on American
 #### Process
 Survey data tend to be messy. The CSAF doesn't define its own variables, so it didn't mark questions as reverse-scaled. After reversing the necessary questions, they need to be labeled so that factors can be correctly identified.
 
-> Q17A doesn't give me enough information to say that a factor is measuring religiosity!
+> The name 'Q17A' doesn't provide enough information to define a factor as measuring religiosity.
 
-This required parsing the codebook using regex, pulling the question text and possible answers into a readable format. Once the data is readable, the factor analysis can be performed. I used psych::fa() to perform a hierarchical factor analysis.
+This required parsing the codebook using regex, pulling the question text and possible answers into a readable format. Once the data is readable, the factor analysis can be performed. I used `psych::fa()` to perform a hierarchical factor analysis.
 
-#### Results
+### Results
 
 <p align="center">
   <a href="https://github.com/asleepwithabook/individual_project/higher_order_structure.png">
@@ -80,10 +78,17 @@ This required parsing the codebook using regex, pulling the question text and po
   </a>
 </p>
 
-The first-order factors explain the variance of groups of individual questions, which I've labeled to reflect the common themes in questions that have significant loadings (|x| > 0.4) on them. Higher-order factors explain the variance of groups of first-order factors, allowing us to group factors for analysis. 
+The first-order factors explain the variance of groups of individual questions, which I've labeled to reflect the common themes in questions that have significant loadings ($|x| > 0.4$) on them. Higher-order factors explain the variance of groups of first-order factors, allowing us to group factors for analysis. 
 
 >Orphans are first-order factors that don't have significant loadings on any higher-order factors. Strength of loadings are represented by line weight and alpha value.
 
-#### Takeaways
+### Takeaways
 
+In this project, I learned how to use R to:
+- Clean large datasets for analysis
+- Perform hierarchical factor analyses
+- Create maps in tidygraph and ggraph
 
+I learned how to use Quarto to:
+- Organize code for readability
+- Create beautiful presentations
