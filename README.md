@@ -1,4 +1,10 @@
 ## Hi, I'm Asher ♡
+*Data Science and Political Economy Student at [The College of Idaho](collegeofidaho.edu)*
+
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-%2Fin%2Fasherbruce%2F-blue?style=flat-square&labelColor=white&color=blue)](linkedin.com/asherbruce/)
+
+
+
 <img 
   src="https://wsrv.nl/?url=raw.githubusercontent.com/asleepwithabook/asleepwithabook/main/avatar.png&w=300&h=300&mask=circle"
   align=right>
