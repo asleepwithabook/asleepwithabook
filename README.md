@@ -45,7 +45,7 @@ asher <- data.frame(
   - *Assessing test validity with exploratory factor analysis*
   - *Scoring tests with item response theory*
 
-## Sample project: [Factor Analysis - Chapman University's American Fears Survey (Wave 10)](https://github.com/asleepwithabook/individual_project)
+## Sample project: [Factor Analysis - Chapman University's Survey of American Fears (Wave 10)](https://github.com/asleepwithabook/individual_project)
 
 ### Tools
 
@@ -53,7 +53,7 @@ asher <- data.frame(
 %%{init: {"theme": "default", "securityLevel": "strict", "startOnLoad": false, "theme": "neutral"}}%%
 
 flowchart LR
-  DATA["Data:<br/>Chapman Survey on American Fears from ARDA"]
+  DATA["Data:<br/>Chapman Survey of American Fears from ARDA"]
   R["R"]
   PACKAGE["Packages:<br/>tidyverse · psych · tidygraph"]
   DEVELOPMENT["Development:<br/>Positron"]
@@ -72,7 +72,7 @@ The [Chapman University Survey on American Fears (CSAF)](thearda.com/data-archiv
 > *Are all the questions about fear of pollution measuring a "fear of pollution" trait?*  
 > *Does news consumption load onto the same factor as perceptions of political selfishness?*
 
-#### Process
+### Process
 Survey data tend to be messy. The CSAF doesn't define its own variables, so it didn't mark questions as reverse-scaled. After reversing the necessary questions, they need to be labeled so that factors can be correctly identified.
 
 > The name 'Q17A' doesn't provide enough information to define a factor as measuring religiosity.
@@ -95,9 +95,11 @@ This required parsing the codebook using regex, pulling the question text and po
   </picture>
 </p>
 
-The first-order factors explain the variance of groups of individual questions, which I've labeled to reflect the common themes in questions that have significant loadings ($|x| > 0.4$) on them. Higher-order factors explain the variance of groups of first-order factors, allowing us to group factors for analysis. 
-
 >Orphans are first-order factors that don't have significant loadings on any higher-order factors. Strength of loadings are represented by line weight and alpha value.
+
+The first-order factors explain the variance within groups of individual questions, which I've labeled to reflect the common themes in questions with significant loadings ($\left|x\right| > 0.4$). Higher-order factors explain the variance of groups of first-order factors, allowing us to group factors for analysis. 
+
+Some interesting results include the split between TV and paper news consumption, the irrelevance of political leanings in predicting a person's fears, the correlation between religiosity, economic fear, and fear of pollution, and the lack of relationship between fear of current events and news consumption.
 
 ### Takeaways
 
