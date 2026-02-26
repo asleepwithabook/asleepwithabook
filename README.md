@@ -45,7 +45,7 @@ asher <- data.frame(
   - *Assessing test validity with exploratory factor analysis*
   - *Scoring tests with item response theory*
 
-## Sample project: [Factor Analysis - Chapman University's Survey of American Fears (Wave 10)](https://github.com/asleepwithabook/individual_project)
+## Sample project: Factor Analysis - Chapman University's Survey of American Fears (Wave 10)
 
 ### Tools
 
