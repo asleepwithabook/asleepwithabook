@@ -7,7 +7,7 @@ ideas:
 - https://medium.com/@chijiokeokorji/from-meh-to-marvelous-the-ultimate-guide-to-crafting-a-killer-github-profile-8dd3f6c6d602
 -->
 
-## hi, i'm asher ♡
+## Hi, I'm Asher.
 
 <img 
   src="https://wsrv.nl/?url=raw.githubusercontent.com/asleepwithabook/asleepwithabook/main/avatar.png&w=300&h=300&mask=circle"
